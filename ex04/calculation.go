@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-const ERROR_MSG = "Argument is invalid"
+const ERROR_MSG = "Arguments is invalid."
 
 func main() {
 	s, ok := calulationStr(os.Args)
@@ -28,7 +28,7 @@ func calulationStr(args []string) (string, bool) {
 	}
 
 	b, err := strconv.ParseInt(args[2], 10, 64)
-	if err != nil {
+	if err != nil || b == 0 {
 		return "", false
 	}
 
